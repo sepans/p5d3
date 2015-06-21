@@ -22,7 +22,7 @@ This is also very helpful to get familiar with the world of d3 and be able to sw
 
 ## Contents
 
-* [About p5.js and d3.js](p5d3/)
+* [About p5.js and d3.js](aboutp5d3/)
 
 * Basics
     * [“Hello world!”](helloworld/)
