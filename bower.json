@@ -1,0 +1,31 @@
+{
+  "name": "p5-d3-cookbook",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sepans/p5d3",
+  "authors": [
+    "sepans <sepans@sepans.com>"
+  ],
+  "description": "Using d3.js utilities for data visualization in p5.js",
+  "main": "index.html",
+  "keywords": [
+    "d3.js",
+    "p5.js",
+    "tutorial",
+    "data",
+    "visualization",
+    "dataviz"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "p5-element": "*",
+    "markdown": "~0.5.0"
+  }
+}
