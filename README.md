@@ -9,12 +9,10 @@
 A series of examples for using d3.js utility functions minimally in p5.js without inter-mingling their different paradigms.
 
 ## Who is this tutorial for?
-This tutorial doesn't intend to encourage using d3.js along with p5.js. These two libraries use different paradigms and ways of rendering and mixing them without 
-care will create cryptic and non-perfomative code. 
+This tutorial doesn't intend to encourage using d3.js along with p5.js. These two libraries use different paradigms and ways of rendering, so mixing them without care will create cryptic and low performance code. 
 
-Moreover d3.js is fast and very flexible and powerful and covers almost every data visualization 
-use case, so there is no need to complement it with p5.js library. But the power of d3.js comes at a price: It requires somehow advanced familiarity 
-with Javascript techniques (like method chaining and functional programing) and [DOM](https://en.wikipedia.org/wiki/Document_Object_Model) to completely understand how it works.
+Moreover d3.js is fast and very flexible, covering almost every data visualization use case, so there is no need to complement it with p5.js library. But the power of d3.js comes at a price: It requires somehow advanced familiarity 
+with Javascript techniques and [DOM](https://en.wikipedia.org/wiki/Document_Object_Model) to completely understand how it works.
 
 On the other hand p5.js (the new implementation of Processing framework in Javascript) is designed to be simple especiallly for non-proficient Javascript coders, making it very popular among artists and designers. 
 Therefore taking advantage of d3.js utility functions for processing data along with p5.js for drawing, makes it possible to create non-trivial data visualizations with ease. 
