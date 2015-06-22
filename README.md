@@ -1,5 +1,5 @@
 <div class="header">
-
+ <img src="http://d3js.org/preview.png" alt="image source: http://d3.org">
 </div>
 
 # Using d3.js utilities for data visualization in p5.js
@@ -23,11 +23,11 @@ This is also helps getting familiar with the world of d3 little by little, and b
 * [About p5.js and d3.js](aboutp5d3/)
 
 * Basics
-    * [“Hello world!”](helloworld/)
+    * “Hello world!”
 
 * Scales
-    * [Linear Scales](linear/)
-    * Non-linear scales]
+    * Linear Scales
+    * Non-linear scales
     * Date/Time scales
     * Drawing Axis using scales
 
