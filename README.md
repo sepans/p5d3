@@ -14,7 +14,7 @@ This tutorial doesn't intend to encourage using d3.js along with p5.js. These tw
 Moreover d3.js is fast and very flexible, covering almost every data visualization use case, so there is no need to complement it with p5.js library. But the power of d3.js comes at a price: It requires somehow advanced familiarity 
 with Javascript techniques and [DOM](https://en.wikipedia.org/wiki/Document_Object_Model) to completely understand how it works.
 
-On the other hand p5.js (the new implementation of Processing framework in Javascript) is designed to be simple especiallly for non-proficient Javascript coders, making it very popular among artists and designers. 
+On the other hand p5.js (the new implementation of Processing framework in Javascript) is designed to be simple especially for non-proficient Javascript coders, making it very popular among artists and designers. 
 Therefore taking advantage of d3.js utility functions for processing data along with p5.js for drawing, makes it possible to create non-trivial data visualizations with ease. 
 This is also helps getting familiar with the world of d3 little by little, and be able to switch to d3.js for advanced data visualizations.
 
