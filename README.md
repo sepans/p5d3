@@ -50,3 +50,6 @@ This is also helps getting familiar with the world of d3 little by little, and b
 <p class="header"><a href="http://twitter.com/" target="_blank">Twitter</a> - <a href="https://github.com/sepans" target="_blank">GitHub</a> 
 -->
 
+## Acknowledgement
+The structure of the framework that generates the tutorial is inspired from [The book of shaders](http://thebookofshaders.com) by [Patricio Gonzalez Vivo](http://patriciogonzalezvivo.com). Parts of the framework code and styles is from [The book of shaders](http://thebookofshaders.com) and [alignedleft.com](http://alignedleft.com) by Scott Murray.
+
