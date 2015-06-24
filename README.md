@@ -26,7 +26,7 @@ This is also helps getting familiar with the world of d3 little by little, and b
     * “Hello world!”
 
 * Scales
-    * Linear Scales
+    * [Linear Scales](linear-scales)
     * Non-linear scales
     * Date/Time scales
     * Drawing Axis using scales
