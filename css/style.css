@@ -199,6 +199,10 @@ code {
     border-radius: 6px;
 }
 
+pre {
+    font-size: 0.85em;
+}
+
 /* Interactive GLSL Canvas 
 ---------------------------------
 */
