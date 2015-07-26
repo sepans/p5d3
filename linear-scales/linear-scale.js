@@ -1,14 +1,6 @@
-
-
-
-  // Generate a Bates distribution of 10 random variables.
   var width = 500,
     height = 400,
-    margin = {
-      top: 10,
-      left: 35,
-      right: 15,
-      bottom: 15
+    margin = {top: 20, left: 35, right: 15, bottom: 35
     };
 
   // this part creates 50 random data points like [{x: 0.2, y: 0.4},...]
@@ -49,6 +41,7 @@
   
   createCanvas(width + margin.left + margin.right, height + margin.top + margin.bottom);
 
+  push();
   translate(margin.left, margin.top);
 
   //draw x-axis
@@ -66,7 +59,10 @@
     // draw little tick line
     line(0, 0, 0, 5);
     // write tick value
-    text(tick, 0, 15);
+//    textSize(24);
+    noStroke();
+    fill(0);
+    text(String(tick), 0, 15);
     pop();
   }
 
@@ -76,10 +72,12 @@
   for (var k = 1; k < yTicks.length; k++) {
     var tick = yTicks[k]
     push();
-    translate(0, yScale(tick));
+    translate(0, yScale(tick) );
     line(0, 0, 5, 0);
 
-    text(tick, -15, 5);
+    noStroke();
+    fill(0);
+    text(String(tick), -15, 5);
     pop();
   }
 
@@ -106,4 +104,4 @@
     pop();
 
   }
-
+  pop();
