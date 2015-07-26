@@ -9,6 +9,11 @@ According to [p5.js website](http://p5js.org/):
 p5.js provides syntax sugar and easy to use tools to create and draw on HTML5 Canvas. It follows [Processing](http://processing.org)'s syntex for drawing shapes: <code>ellipse</code>, <code>rect</code>, <code>line</code> and many [more](http://p5js.org/reference/). Drawing on canvas gives maximum flexibility of being able to access and modify any pixel of the canvas. 
 Since shapes and other drawings are the trace of the virtual ink over the canvas, it is not possible to modify the shape or attach event listeners (such as on-click or on-mouseover) after they have been drawn.
 
+Below is an example of simple bar chart based on data using p5.js:
+
+<iframe height='400' scrolling='no' src='//codepen.io/sepans/embed/GJYwgr/?height=400&theme-id=17280&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/sepans/pen/GJYwgr/'>Very simple p5.js bar chart</a> by Sepand Ansari (<a href='http://codepen.io/sepans'>@sepans</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
 ## d3.js
 
 > D3.js is a JavaScript library for manipulating documents based on data.
