@@ -1,95 +1,107 @@
-function setup() {
-  
-  /* 
-   This section of code is the exact copy of d3.js example
-  */
-
-  // Generate a Bates distribution of 10 random variables.
   var width = 500,
-      height = 400,
-      margin = {top: 10, left: 35, right: 15, bottom: 15};
-  
+    height = 400,
+    margin = {top: 20, left: 35, right: 15, bottom: 35
+    };
+
+  // this part creates 50 random data points like [{x: 0.2, y: 0.4},...]
   var randomizer = d3.random.bates(10);
   var data = d3.range(50).map(function() {
-    return {x: randomizer(), y: randomizer()};
+    return {
+      random1: randomizer() * 100,
+      random2: randomizer() * 100
+    };
   });
-                                 
-  //console.log('data ',data);
-  
-  var xData = function(d) { return d.x};
-  var yData = function(d) { return d.y};
 
+  // accessor functions which define how to get access to x and y values
+  var xData = function(d) {
+    return d.random1
+  };
+  var yData = function(d) {
+    return d.random2
+  };
 
+  // x-scale
   var xScale = d3.scale.linear()
-      .domain([d3.min(data, xData), d3.max(data, xData)])
-      .range([0, width])
-      .nice();
+    .domain([d3.min(data, xData), d3.max(data, xData)])
+    .range([0, width])
+    .nice();
 
+  // 8 ticks for x scale
+  var xTicks = xScale.ticks(8);
 
-
+  // same for y-scale
   var yScale = d3.scale.linear()
-      .domain([d3.min(data, yData), d3.max(data, yData)])
-      .range([height, 0])
-      .nice();
+    .domain([d3.min(data, yData), d3.max(data, yData)])
+    .range([height, 0])
+    .nice();
 
+  var yTicks = yScale.ticks(8);
+
+  //at this point we have all we need to draw the chart using p5.js
   
-
   createCanvas(width + margin.left + margin.right, height + margin.top + margin.bottom);
 
-
+  push();
   translate(margin.left, margin.top);
-  
-  line(0, height-margin.bottom, width, height-margin.bottom);
-  
-  var xTicks = xScale.ticks(8);
-  //console.log(xTicks);
-  
-  for(var j=0; j<xTicks.length; j++){
+
+  //draw x-axis
+  line(0, height - margin.bottom, width, height - margin.bottom);
+
+  textAlign(CENTER);
+
+  //draw ticks for x-axis
+  for (var j = 1; j < xTicks.length; j++) {
+    //get j-th tick
+    var tick = xTicks[j];
     push();
-    translate(xScale(xTicks[j]), height - margin.bottom);
-    line(0, 0 , 0, 5);
-    textAlign(CENTER);
-    
-    text(xTicks[j], 0 , 15);
+    // translate
+    translate(xScale(tick), height - margin.bottom);
+    // draw little tick line
+    line(0, 0, 0, 5);
+    // write tick value
+//    textSize(24);
+    noStroke();
+    fill(0);
+    text(String(tick), 0, 15);
     pop();
   }
-  
- line(0, 0, 0, height-margin.bottom);
-  
-  var yTicks = yScale.ticks(8);
-  //console.log(xTicks);
-  
-  for(var j=1; j<yTicks.length; j++){
-    push();
-    translate(0, yScale(yTicks[j]));
-    line(0, 0 , 5, 0);
-    textAlign(CENTER);
-    
-    text(yTicks[j], -15 , 5);
-    pop();
-  }  
 
-  for(var i = 0; i< data.length; i++) {
-    
+  // same for y-axis
+  line(0, 0, 0, height - margin.bottom);
+
+  for (var k = 1; k < yTicks.length; k++) {
+    var tick = yTicks[k]
+    push();
+    translate(0, yScale(tick) );
+    line(0, 0, 5, 0);
+
+    noStroke();
+    fill(0);
+    text(String(tick), -15, 5);
+    pop();
+  }
+
+  //
+  for (var i = 0; i < data.length; i++) {
+
     var d = data[i];
     push();
+    translate(xScale(d.random1), yScale(d.random2));
+    /*
+    A better way of writing above is by using accessor functions.
     translate(xScale(xData(d)), yScale(yData(d)));
+    */
 
-   
     fill(70, 130, 180);
     noStroke();
-    ellipse(0,0, 10, 10);
+    ellipse(0, 0, 10, 10);
 
-  
-/*
-    fill(255);
-    textAlign(CENTER);
-    text(formatCount(d.y), x(data[0].dx) / 2, -2, x(data[0].dx), 20 );
-*/
+    /*
+        fill(255);
+        textAlign(CENTER);
+        text(formatCount(d.y), x(data[0].dx) / 2, -2, x(data[0].dx), 20 );
+    */
     pop();
 
-    
   }
-  
-}
-
+  pop();

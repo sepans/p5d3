@@ -16,25 +16,27 @@ with Javascript techniques and [DOM](https://en.wikipedia.org/wiki/Document_Obje
 
 On the other hand p5.js (the new implementation of Processing framework in Javascript) is designed to be simple especially for non-proficient Javascript coders, making it very popular among artists and designers. 
 Therefore taking advantage of d3.js utility functions for processing data along with p5.js for drawing, makes it possible to create non-trivial data visualizations with ease. 
-This is also helps getting familiar with the world of d3 little by little, and be able to switch to d3.js for advanced data visualizations.
+This also helps getting familiar with the world of d3 little by little, and be able to switch to d3.js for advanced data visualizations.
 
 ## Contents
 
-* [About p5.js and d3.js](aboutp5d3/)
 
 * Basics
-    * “Hello world!”
+    * [About p5.js and d3.js](aboutp5d3/)
 
 * Scales
-    * [Linear Scales](linear-scales)
-    * Non-linear scales
+    * [Bar Chart with Linear and Ordinal Scales](bar-chart)
+    * [Scatterplot Color and Non-linear Scales](scatter-plot)
     * Date/Time scales
-    * Drawing Axis using scales
+    <!--* [Drawing Axis using scales](drawing-axis)-->
 
 
 * Layouts:
-    * Histogram
-    * Voronoi
+    * [Histogram](histogram)
+    * [Voronoi](voronoi)
+
+* Geography
+    * [Using Geojson - US Map](us-map)
 
 <!--
 * [Examples](examples/)
