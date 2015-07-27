@@ -9,11 +9,11 @@ Below code shows how d3 scales are defined:
 
 ```
 var xScale = d3.scale.linear()
-  .domain([0, d3.max(data, xData)])
+  .domain([0, 100])
   .range([0, width]);
 ```
 
-xScale is a linear scale with its domain being from 0 to maximum x value and its range from 0 to width. What <code>d3.scale.linear()</code> returns is itself a function so it could be called.
+xScale is a linear scale with its domain being from 0 to 100 (assuming 100 is the maximum x value) and its range from 0 to width. What <code>d3.scale.linear()</code> returns is itself a function so it could be called.
 
 In order to convert a number to pixel position, you just need to call `xScale` function:
 
@@ -22,7 +22,15 @@ var actualData = 54;
 var xValue = xScale(actualData);
 ```
 
-<i>Ordinal scale</i> is a type of scale where its domain is discreet non-numeral (mostly) values. For exampe in a bar chart where the x-axis is state names and y-axis is population, ordinal scale is used for x-axis.
+
+<i>Ordinal scale</i> is a type of scale where its domain is discreet non-numeral (mostly) values. For exampe in a bar chart where the x-axis is state names and y-axis is population, ordinal scale is used for x-axis. Initializing Ordinal scales are similar to linear scale except that for the domain, instead of minimum and maximum value, all the values need to be passed to scale:
+
+```
+var states = ['Alabama','Alaska',...];
+var xScale = d3.scale.ordinal()
+  .domain(states)
+  .range([0, width]);
+```
 
 Below is an example of using linear and ordinal Scales.
 
